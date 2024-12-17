@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sooubway Sandwiches</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <!-- Bonus feature: Order count feature -->
+    <div>Check out the order count feature I added: "Next order #..."</div>
+    
+    <h1>Sooubway Sandwiches - OMS</h1>
+    <h2>Order Management System (OMS)</h2>
+
+    <!-- Order Placement Section -->
+    <section id="order-placement">
+        <h3>Place Your Order</h3>
+
+        <form id="order-form">
+            <label for="customer-name">Customer Name:</label>
+            <input type="text" id="customer-name" required><br><br>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="text" id="phone-number" required><br><br>
+
+            <h4>Sandwich</h4>
+            <fieldset>
+                <legend>Size:</legend>
+                <label><input type="radio" name="size" value="P" required> Personal</label>
+                <label><input type="radio" name="size" value="M"> Medium</label>
+                <label><input type="radio" name="size" value="L"> Large</label>
+                <label><input type="radio" name="size" value="XL"> XL</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bread:</legend>
+                <label><input type="radio" name="bread" value="FR" required> French</label>
+                <label><input type="radio" name="bread" value="WI"> White</label>
+                <label><input type="radio" name="bread" value="WE"> Wheat</label>
+                <label><input type="radio" name="bread" value="IT"> Italian</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Main Ingredient:</legend>
+                <label><input type="radio" name="ingredient" value="Ham" required> Ham</label>
+                <label><input type="radio" name="ingredient" value="Chicken"> Chicken</label>
+                <label><input type="radio" name="ingredient" value="Beef"> Beef</label>
+                <label><input type="radio" name="ingredient" value="Turkey"> Turkey</label>
+                <label><input type="radio" name="ingredient" value="Tofu"> Tofu</label>
+                <label><input type="radio" name="ingredient" value="Carrot"> Carrot</label>
+                <label><input type="radio" name="ingredient" value="Spinach"> Spinach</label>
+                <label><input type="radio" name="ingredient" value="Mushroom"> Mushroom</label>
+            </fieldset>
+
+            <br><label for="cheese">Cheese:</label>
+            <select id="cheese">
+                <option value="cheddar">Cheddar</option>
+                <option value="swiss">Swiss</option>
+                <option value="provolone">Provolone</option>
+                <option value="mozzarella">Mozzarella</option>
+                <option value="gouda">Gouda</option>
+            </select><br><br>
+
+            <h4>Toppings/Dressings</h4>
+            <div class="toppings-container">
+                <label><input type="checkbox" value="TK"> Tomato Ketchup</label>
+                <label><input type="checkbox" value="RM"> Regular Mayonnaise</label>
+                <label><input type="checkbox" value="FS"> Fried Sauce</label>
+                <label><input type="checkbox" value="HM"> Honey Mustard</label>
+                <label><input type="checkbox" value="IV"> Italian Vinaigrette</label>
+                <label><input type="checkbox" value="OP"> Olive Pesto</label>
+                <label><input type="checkbox" value="SC"> Sour Cream</label>
+                <label><input type="checkbox" value="BC"> Baja Chipotle</label>
+                <label><input type="checkbox" value="BO"> Beano’s Original</label>
+                <label><input type="checkbox" value="PR"> Peppercorn Ranch</label>
+            </div>
+
+            <h4>Additional Items</h4>
+            <div>
+                <fieldset>
+                    <legend>Drinks:</legend>
+                    <label><input type="checkbox" value="FS"> Fountain Soda</label>
+                    <label><input type="checkbox" value="SS"> Strawberry Smoothie</label>
+                    <label><input type="checkbox" value="RC"> Regular Coffee</label>
+                    <label><input type="checkbox" value="HC"> Hot Chocolate</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sides:</legend>
+                    <label><input type="checkbox" value="CS"> Cesar Salad</label>
+                    <label><input type="checkbox" value="FP"> Fries Potatoes</label>
+                    <label><input type="checkbox" value="CN"> Chicken Nuggets</label>
+                </fieldset>
+            </div>
+
+            <br><br>
+            <button type="button" id="place-order">Place Order</button>
+            <br><br>
+            <label>Order# <span id="order-number">1</span></label>
+        </form>
+    </section>
+
+    <!-- Order Fulfillment Section -->
+    <section id="order-fulfillment">
+        <h3>Order Fulfillment Section</h3>
+        <table id="order-status">
+            <thead>
+                <tr>
+                    <th>New Orders</th>
+                    <th>Waiting Orders</th>
+                    <th>Hurry Up!</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="new-orders"></td>
+                    <td id="waiting-orders"></td>
+                    <td id="hurry-orders"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Order Completed Section -->
+    <section id="order-completed">
+        <h3>Order Completed Section</h3>
+        <ul id="completed-orders"></ul>
+    </section>
+</body>
+</html>
